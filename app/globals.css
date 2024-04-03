@@ -1,0 +1,112 @@
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 0, 0, 0;
+      --background-end-rgb: 0, 0, 0;
+  }
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.root-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Changed from center to start */
+  align-items: stretch; /* Changed to stretch to allow children to take full width */
+  width: 100%;
+  height: 100vh;
+  min-width: 400px;
+  min-height: 600px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px; /* Adjusted for content */
+  background-color: rgb(91, 148, 217);
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  
+}
+/* Apply a flex layout to the main container to establish a flex context for its children */
+.main-container {
+  display: flex;
+  flex-direction: row; /* Align children side by side */
+  width: 100%; /* Take up full width of the container */
+  height: calc(100vh - 100px); /* Adjust the height if your header has a different height than 100px */
+}
+
+/* Style the sidebar to take up 1/4 of the width */
+.sidebar-container {
+  flex: 1; /* Takes up 1 part of the available space */
+}
+
+/* Style the map to take up 3/4 of the width */
+.map {
+  flex: 3; /* Takes up 3 parts of the available space */
+  position: relative;
+  width: 100%; /* or specific dimensions */
+  height: 100%; /* or specific dimensions */
+}
+
+.header-container a {
+  transition: all 0.4s ease;
+  font-weight: bold;
+  color: white; /* Ensures link text is white */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.header-container a:hover {
+  transform: scale(1.3); /* Ensures the hover effect works */
+}
+
+  
+
+.resize-image {
+  font-weight: lighter;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  Image{
+     width: 50px; 
+  }
+
+}
+.left{
+  flex: 3;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.right {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 50px;
+  height: 100%;
+  a{
+      padding: 12px 20px;
+      margin: 20px;
+  }
+}
+
+
+
+
+
+  
+  
+
+

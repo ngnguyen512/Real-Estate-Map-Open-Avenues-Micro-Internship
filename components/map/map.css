@@ -1,0 +1,12 @@
+.toggleLayerButton {
+    position: absolute;
+    top: 20px; /* equivalent to 'top-5' in Tailwind, but you need to adjust the value */
+    left: 20px; /* equivalent to 'left-5' */
+    padding: 0.5rem; /* equivalent to 'p-2' */
+    background-color: white; /* 'bg-white' */
+    color: black; /* 'text-black' */
+    font-size: 0.875rem; /* roughly equivalent to 'text-sm' */
+    border-radius: 0.375rem; /* roughly equivalent to 'rounded-md' */
+    border: none; /* Assuming you don't want a border */
+    cursor: pointer; /* To indicate it's clickable */
+  }
