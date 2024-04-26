@@ -1,10 +1,12 @@
+
 import {Metadata} from 'next';
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
-import Sidebar from "@/components/Sidebar"
+import Sidebar from "@/components/map/sidebar/Sidebar"
 import "./globals.css";
 import MapBox from '@/components/map/map'
 import App from './page'
+import { ApolloWrapper } from '@/data/apollo';
 
 export const metadata = {
   title: "Create Next App",
@@ -13,16 +15,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    
     <html lang="en">
       <body className="root-body">
           
           <section className='aaa'>
-            <div className="header-container">
-              <Header />
-            </div>
+           
             <App/>
           </section>
       </body>
     </html>
+   
   );
 }

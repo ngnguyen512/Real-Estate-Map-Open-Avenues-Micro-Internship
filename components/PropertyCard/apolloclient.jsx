@@ -19,7 +19,7 @@ function TaxAssessors() {
   const { loading, error, data } = useQuery(GET_TAX_ASSESSORS);
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (error) return <p>Error :</p>;
 
   return (
     <div>

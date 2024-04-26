@@ -48,12 +48,12 @@ html, body {
 
 /* Style the sidebar to take up 1/4 of the width */
 .sidebar-container {
-  flex: 1; /* Takes up 1 part of the available space */
+  flex: 2; /* Takes up 1 part of the available space */
 }
 
 /* Style the map to take up 3/4 of the width */
 .map {
-  flex: 3; /* Takes up 3 parts of the available space */
+  flex: 4; /* Takes up 3 parts of the available space */
   position: relative;
   width: 100%; /* or specific dimensions */
   height: 100%; /* or specific dimensions */
@@ -93,15 +93,135 @@ html, body {
   flex: 2;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-end; 
   gap: 50px;
   height: 100%;
+  margin: 10px;
+  padding-right: 20px;
   a{
       padding: 12px 20px;
       margin: 20px;
   }
 }
+.building-info-card-container{
+  width: 450px; /* Fixed width */
+  height: 400px; /* Fixed height, adjust as needed */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: #fff;
+  padding: 20px;
+  margin: 20px;
+  box-sizing: border-box; 
+  overflow: hidden;
+}
+.building-info-card-title{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+.building-info-card-info{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+}
+.building-info-card-info span:first-child {
+  font-weight: bold; /* Make label bold */
+}
+.building-info-card-info span:last-child {
+  text-align: right; /* Align value to the right */
+  flex-grow: 1; /* Allow the span to grow and push the value to the right */
+  margin-left: 16px; /* Ensure some space between label and value */
+}
 
+.search-form {
+  display: flex;
+  margin-left: 20px;
+}
+.search-input {
+  padding: 8px;
+  margin-right: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 300px;
+}
+.search-button {
+  padding: 8px 16px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.search-button:hover {
+  background-color: #0056b3;
+  margin-right: 5px;
+}
+
+.sidebar-card {
+  background: #f8f9fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 8px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px
+}
+.details-toggle {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.details {
+  background-color: #fff;
+  border-top: 2px solid #eee;
+  padding-top: 10px;
+}
+
+.details p {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  margin: 10px 0;
+  padding: 4px;
+  border-bottom: 1px solid #eee;
+}
+.details p:last-child {
+  border-bottom: none;
+}
+
+.details p span:first-child {
+  text-align: left; /* Aligns the key to the left */
+  font-weight: bold; /* Optional: makes the key bold */
+}
+
+.details p span:last-child {
+  text-align: right; /* Aligns the value to the right */
+}
+
+.input {
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Optional: adds a shadow for better visibility */
+  border: 1px solid #ccc; /* Optional: defines a border */
+  border-radius: 4px; /* Optional: rounds the corners */
+
+}
 
 
 
